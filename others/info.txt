@@ -1,0 +1,30 @@
+Amazon S3
+
+Criar bucket
+
+Nome do bucket: wm-qrcode-storage
+
+Desmarcar Bloquer todo o acesso público
+
+----------------------
+
+Selecionar o bucket criado
+
+Permissões
+
+Editar política de bucket
+
+Policy do Bucket do S3
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicRead",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::wm-qrcode-storage/*"
+    }
+  ]
+}
+
